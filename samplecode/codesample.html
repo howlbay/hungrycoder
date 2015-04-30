@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>The Hungry Coder</title>
+</head>
+
+<body>
+    <div class="container" id="maincontainer">
+        <div class="col-md-6">
+            <input type="text" class="form-control" id="findmefood" data-bind="textInput: userlocation">
+        </div>
+        <div class="col-md-6" id="maps">
+        </div>
+    </div>
+
+<!-- ajax -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" type='text/javascript'></script>
+<!-- bootstrap -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<!-- knockout -->
+<script src='knockout-3.2.0.js'></script>
+<!-- my script -->
+<script src='hungry.js'></script>
+<!-- google api -->
+<script type='text/javascript' src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAOyOmjt0cVkeOi2-19_RmStXVu9DfikF0&libraries=places"></script>
+<script type='text/javascript' src='googlemaps.js'></script>
+</body>
+</html>
