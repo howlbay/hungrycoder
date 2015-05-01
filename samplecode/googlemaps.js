@@ -16,7 +16,6 @@ var map;
         //waits for google maps to load knockout.This is not ideal for a website but is fine for a game.
        google.maps.event.addListenerOnce(map, 'idle', function(){
             ko.applyBindings(hungry,$("#maincontainer")[0]);
-            alert('cool');
         });
         
         return map;
@@ -43,7 +42,7 @@ var map;
       //gets distance in meters between two objects. It assumes a flat earth as we are dealing with relatively short distances where arcs are not that important.
       //takes in googlemaps latlng objects.
       function distance(object1,object2){
-        var d=Math.sqrt(Math.pow(object2.lat()-object1.lat(),2)+Math.pow(object2.lng()-object1.lng()),2);
+        var d=Math.sqrt(Math.pow(object2.lat()-object1.lat(),2)+Math.pow(object2.lng()-object1.lng(),2));
         var geotometer=111000;
         return geotometer*d;
       }
@@ -69,7 +68,7 @@ var map;
                 });
           }
         
-            //searches for attractions
+            //searches for attractions based on prominence. 
           self.attractionsearch=function(options,callback){
             var searchinfo={};
             if (options.geocode) {
