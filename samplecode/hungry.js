@@ -148,10 +148,11 @@ function HungryModel() {
             var bounds=new google.maps.LatLngBounds();
             
             //creates the markers now.
-                for(var i=0; i<self.sickorder().length; i++){
+            var sicklength=self.sickorder().length;
+                for(var i=0; i<sicklength; i++){
                     var icon;
                     //the last icon is green as it represents the restaurant the person got sick at.
-                    if (i==self.sickorder().length-1) {
+                    if (i==sicklength-1) {
                         icon='http://maps.google.com/mapfiles/ms/icons/green-dot.png';
                     }else{
                         icon='http://maps.google.com/mapfiles/ms/icons/red-dot.png';
